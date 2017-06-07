@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Спрайт АНИМАЦИИ</title>
+<script type="text/javascript" src="core_engine/scriptjava.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript" src="core_engine/cartoon_image.js"></script>
+<div id="block1">
+	<a href="http://scriptjava.net/" target="_blank" >
+		<img id="cartoon1" border="0" />
+	</a>
+</div>
+<div id="block2">
+	<a href="http://scriptjava.net/" target="_blank" >
+		<img id="cartoon2" border="0" />
+	</a>
+</div>
+<div id="block3" style="position: relative; top: -100px;">
+	<a href="http://scriptjava.net/" target="_blank" >
+		<img id="cartoon3" border="0" />
+	</a>
+</div>
+<div id="block4" style="position: relative; left: 150px; top: -200px;">
+	<a href="#" target="_blank" >
+		<img id="cartoon4" border="0" />
+	</a>
+</div>
+<div id="block5" style="position:  relative; top: -100px;">
+	<a href="http://scriptjava.net/" target="_blank" >
+		<img id="cartoon5" border="0" />
+	</a>
+</div>
+<div id="block6" style="position: relative; left: 600px; top: -250px;">
+	<a href="http://scriptjava.net/" target="_blank" >
+		<img id="cartoon6" border="0" />
+	</a>
+</div>
+<script type="text/javascript">
+	
+var cartoon_set_1 = function() {
+	var c_i1 = new cartoon_image();
+	c_i1.stop();
+	c_i1.play({
+			id:['block1','cartoon1'],//id div элемента и img элемента
+			src:'test_img/test.png',//ссылка на изображение
+			frames_x:60,//количество кадров на изображении по x
+			frames_y:1,//количество кадров на изображении по y
+			width:12120,//ширина изображения
+			height:193,//высота изображения
+			fps:24,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:true,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+			document.getElementById("block1").remove();
+			}
+		});
+}();
+
+var cartoon_set_2 = function() {
+	var c_i2 = new cartoon_image();
+	c_i2.stop();
+	c_i2.play({
+			id:['block2','cartoon2'],//id div элемента и img элемента
+			src:'test_img/test1.png',//ссылка на изображение
+			frames_x:65,//количество кадров на изображении по x
+			frames_y:0,//количество кадров на изображении по y
+			width:2925,//ширина изображения
+			height:144,//высота изображения
+			fps:20,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:false,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+			}
+		});
+}();
+
+var cartoon_set_3 = function() {
+	var c_i3 = new cartoon_image();
+	c_i3.stop();
+	c_i3.play({
+			id:['block3','cartoon3'],//id div элемента и img элемента
+			src:'test_img/test2.png',//ссылка на изображение
+			frames_x:33,//количество кадров на изображении по x
+			frames_y:1,//количество кадров на изображении по y
+			width:3729,//ширина изображения
+			height:180,//высота изображения
+			fps:24,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:false,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+				//сюда можно пысать следующий код который будет выполняться после завершения анимации
+			}
+		});
+}();
+
+var cartoon_set_4 = function() {
+	var c_i4 = new cartoon_image();
+	c_i4.stop();
+	c_i4.play({
+			id:['block4','cartoon4'],//id div элемента и img элемента
+			src:'test_img/test3.png',//ссылка на изображение
+			frames_x:6,//количество кадров на изображении по x
+			frames_y:3,//количество кадров на изображении по y
+			width:486,//ширина изображения
+			height:307,//высота изображения
+			fps:11,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:false,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+				//сюда можно пысать следующий код который будет выполняться после завершения анимации
+			}
+		});
+}();
+
+var cartoon_set_5 = function() {
+	var c_i5 = new cartoon_image();
+	c_i5.stop();
+	c_i5.play({
+			id:['block5','cartoon5'],//id div элемента и img элемента
+			src:'test_img/test6.png',//ссылка на изображение
+			frames_x:2,//количество кадров на изображении по x
+			frames_y:4,//количество кадров на изображении по y
+			width:1024,//ширина изображения
+			height:1024,//высота изображения
+			fps:20,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:false,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+				//сюда можно пысать следующий код который будет выполняться после завершения анимации
+			}
+		});
+}();
+
+var cartoon_set_6 = function() {
+	var c_i6 = new cartoon_image();
+	c_i6.stop();
+	c_i6.play({
+			id:['block6','cartoon6'],//id div элемента и img элемента
+			src:'test_img/test7.png',//ссылка на изображение
+			frames_x:4,//количество кадров на изображении по x
+			frames_y:4,//количество кадров на изображении по y
+			width:512,//ширина изображения
+			height:512,//высота изображения
+			fps:26,//скорость показа кадров в секунду, можно писать дробные числа
+			reverse:false,//если true то проигрывается с конца в начало
+			playandstop:false,//если true то проиграть 1 раз и передать управление функции next
+			next: function () {//выполнится только если playandstop==true
+				//сюда можно пысать следующий код который будет выполняться после завершения анимации
+			}
+		});
+}();
+
+</script>
+</body>
+
+</html>
